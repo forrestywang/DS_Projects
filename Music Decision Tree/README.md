@@ -14,7 +14,7 @@ The initialized constants are used to categorize the variables in the data set a
 
 ### Making and cleaning the data frame
 
-The goal of machine learning models is to use data from independent variables to predict the result of a dependent variable. By splitting up the original data frame into its dependent and independent variables, we can now use them to train the model. I accomplished this using `pandas`' `read_csv` method.
+The goal of machine learning models is to use data from independent variables to predict the result of a dependent variable. By splitting up the original data frame into its dependent and independent variables, we can now use them to train the model. I accomplished this using `pandas`' `read_csv()` method to extract data from the .csv file.
 
 <br>
 
