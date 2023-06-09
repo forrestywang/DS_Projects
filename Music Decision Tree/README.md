@@ -14,7 +14,7 @@ The constants were used to categorize the variables in the data set and improve 
 
 ### Making and cleaning the data frame
 
-The goal of machine learning models is to use data from independent variables to predict the result of a dependent variable. By splitting up the original data frame into its dependent and independent variables, I can now use them to train the model. I accomplished this using `pandas`' `read_csv()` method to extract data from the .csv file.
+The goal of machine learning models is to use data from independent variables to predict the result of a dependent variable. By splitting up the original data frame into its dependent and independent variables, I could now use them to train the model. I accomplished this using `pandas`' `read_csv()` method to extract data from the .csv file.
 
 <br>
 
