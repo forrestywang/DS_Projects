@@ -1,6 +1,6 @@
 # Titanic Logistic Regression
 
-Code copied from [Python Maratón's sklearn Logistic Regression Video](https://www.youtube.com/watch?v=VK6v9Ure8Lk). The scikit-learn and pandas packages make the logistic regression model and set up the data frame respectively.
+Code copied from [Python Maratón's sklearn Logistic Regression Video](https://www.youtube.com/watch?v=VK6v9Ure8Lk). The scikit-learn and pandas packages made the logistic regression model and set up the data frame respectively.
 
 ## In-Depth Documentation
 
