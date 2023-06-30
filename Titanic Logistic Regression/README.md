@@ -16,7 +16,7 @@ The constants were used to categorize the variables in the data set and improve 
 
 The goal of machine learning models is to use data from independent variables to predict the result of a dependent variable. By splitting up the original data frame into its dependent and independent variables, I could now use them to train the model. I accomplished this using `pandas`' `read_csv()` function to extract data from the .csv file.
 
-Sex was an important factor when predicting survival, so I included as an independent variable. However, since it was a categorical variable (its values were non-numerical), the training algorithm could not interpret it. To circumvent this, I can changed it into a dummy variable.
+Sex was an important factor when predicting survival, so I included as an independent variable. However, since it was a categorical variable (its values were non-numerical), the training algorithm could not interpret it. To circumvent this, I changed it into a dummy variable.
 
 `pandas`' `get_dummies(X, columns=CAT_VAR, drop_first=True)` function replaced the `'Sex'` column with `'Sex_male'`. This made all entries boolean values, where True represented male and False represented female. The `drop_first` parameter removed one of the dummy variables, since if all other dummy variables were false, then the removed one is true.
 
