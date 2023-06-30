@@ -18,7 +18,7 @@ The goal of machine learning models is to use data from independent variables to
 
 Sex was an important factor when predicting survival, so I included it as an independent variable. However, since it was a categorical variable (its values were non-numerical), the training algorithm could not interpret it. To circumvent this, I changed it into a dummy variable.
 
-`pandas`' `get_dummies(X, columns=CAT_VAR, drop_first=True)` function replaced the `'Sex'` column with `'Sex_male'`. This made all entries boolean values, where True represented male and False represented female. The `drop_first` parameter removed one of the dummy variables, since if all other dummy variables were false, then the removed one is true.
+`pandas`' `get_dummies(X, columns=CAT_VAR, drop_first=True)` function replaced the `'Sex'` column with `'Sex_male'`. This made all entries boolean values, where True represented male and False represented female. The `drop_first` parameter removed one of the dummy variables, since if all other dummy variables were false, then the removed one was true.
 
 <br>
 
