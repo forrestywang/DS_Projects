@@ -36,7 +36,7 @@ Then, I initialized the logistic regression with `sklearn.linear_model`'s `Logis
 
 ### Predicting the test set and calculating the accuracy
 
-Now that the logistic regression has been trained, I can predict the accuracy by testing it with the `predict(X_test)` function. `sklearn.metrics`' `accuracy_score(y_test, predictions)` function will compare the results and return the accuracy. Since the accuracy ∈ [0, 1], multiplying it by 100 and concatenating a % sign turned it into a percentage.
+Now that the logistic regression has been trained, I predicted the accuracy by testing it with the `predict(X_test)` function. `sklearn.metrics`' `accuracy_score(y_test, predictions)` function compared the results and returned the accuracy. Since the accuracy ∈ [0, 1], multiplying it by 100 and concatenating a % sign turned it into a percentage.
 
 <br>
 
