@@ -2,7 +2,7 @@
 
 Code copied from [Programming with Mosh's Python Machine Learning Tutorial](https://www.youtube.com/watch?v=7eh4d6sabA0). The scikit-learn and pandas packages made the decision tree model and set up the data frame respectively.
 
-## In-depth Documentation
+## In-depth Documentation: [Decision Tree.ipynb](/Music%20Decision%20Tree/Decision%20Tree.ipynb)
 
 ### Setting up the machine learning model
 
