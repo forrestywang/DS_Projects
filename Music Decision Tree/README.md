@@ -8,7 +8,7 @@ Code copied from [Programming with Mosh's Python Machine Learning Tutorial](http
 
 First, I imported the necessary packages for manipulating the data set, making and training the decision tree, testing accuracy, and exporting the model.
 
-The constants were used to categorize the variables in the data set and improve readability.
+The constants were used to categorize the variables in the data set and improve readability. 'genre' was the dependent variable because it depended on the independent variables 'age', and 'gender'.
 
 <br>
 
