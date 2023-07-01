@@ -32,7 +32,7 @@ NUM_VAR = ['policyHolderAge', 'homeInsurancePremium', 'nbWeeksInsured']
 MODEL_NAME = 'insurance-model.joblib'
 ```
 
-First, I imported the necessary packages for manipulating the data set, making and training the logistic regression, testing accuracy, and exporting the model. The scikit-learn and pandas packages made the logistic regression model and set up the data frame respectively.
+First, I imported the necessary packages for manipulating the data set, making and training the logistic regression, testing accuracy, and exporting the model. The `scikit-learn` and `pandas` packages made the logistic regression model and set up the data frame respectively.
 
 I started the timer here to see how long everything took to execute.
 
