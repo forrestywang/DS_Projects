@@ -1,6 +1,6 @@
 # Machine Learning Workshop
 
-Submission for the [2023 McMaster & Co-operators Problem-Solving Workshop](https://math.mcmaster.ca/fourth-mcmaster-co-operators-problem-solving-workshop/). The scikit-learn and pandas packages made the logistic regression model and set up the data frame respectively.
+Submission for the [2023 McMaster & Co-operators Problem-Solving Workshop](https://math.mcmaster.ca/fourth-mcmaster-co-operators-problem-solving-workshop/). Although our team did not win, I am thankful that the workshop gave me an introduction to the world of data science and machine learning.
 
 ## In-Depth Documentation: [Logistic Regression.ipynb](/Machine%20Learning%20Workshop/Logistic%20Regression.ipynb)
 
@@ -30,7 +30,7 @@ NUM_VAR = ['policyHolderAge', 'homeInsurancePremium', 'nbWeeksInsured']
 MODEL_NAME = 'insurance-model.joblib'
 ```
 
-First, I imported the necessary packages for manipulating the data set, making and training the logistic regression, testing accuracy, and exporting the model.
+First, I imported the necessary packages for manipulating the data set, making and training the logistic regression, testing accuracy, and exporting the model. The scikit-learn and pandas packages made the logistic regression model and set up the data frame respectively.
 
 I started the timer here to see how long everything took to execute.
 
@@ -99,7 +99,7 @@ score = accuracy_score(y_test, predictions) * 100
 print("Accuracy:", score, '\b%')
 ```
 
-Now that the logistic regression has been trained, I predicted the accuracy by testing it with the `log_reg.predict(X_test)` function. `sklearn.metrics`' `accuracy_score(y_test, predictions)` function compared the results and returned the accuracy. Since the accuracy ∈ [0, 1], multiplying it by 100 and concatenating a % sign turned it into a percentage.
+Now that the logistic regression has been trained, I predicted the accuracy by testing it with the `log_reg.predict(X_test)` function. `sklearn.metrics`' `accuracy_score(y_test, predictions)` function compared the results and returned the accuracy. Since the accuracy $\in [0, 1]$, multiplying it by 100 and concatenating a % sign turned it into a percentage.
 
 <br>
 
