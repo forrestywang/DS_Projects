@@ -53,7 +53,7 @@ Sex was an important factor when predicting survival, so I included it as an ind
 ### Setting up the train-test modularization and logistic regression model
 
 ```python
-# Testing and training sets:
+# Training and testing sets:
 X_train, X_test, y_train, y_test = train_test_split(X, y, train_size=0.8)
 
 # Logistic regression model:
