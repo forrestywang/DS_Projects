@@ -1,6 +1,6 @@
 # Titanic Logistic Regression
 
-Code copied from [Python Maratón's Sklearn Logistic Regression Video](https://www.youtube.com/watch?v=VK6v9Ure8Lk). The scikit-learn and pandas packages made the logistic regression model and set up the data frame respectively.
+Code copied from [Python Maratón's Sklearn Logistic Regression Video](https://www.youtube.com/watch?v=VK6v9Ure8Lk).
 
 <br>
 
@@ -28,7 +28,7 @@ CAT_VAR = ['Sex']
 MODEL_NAME = 'titanic-model.joblib'
 ```
 
-First, I imported the necessary packages for manipulating the data set, making and training the logistic regression, testing accuracy, and exporting the model.
+First, I imported the necessary packages for manipulating the data set, making and training the logistic regression, testing accuracy, and exporting the model. The `scikit-learn` and `pandas` packages made the decision tree model and set up the data frame respectively.
 
 The constants were used to categorize the variables in the data set and improve readability. 'Survived' was the dependent variable because it depended on the independent variables `'Pclass'`, `'Sex'`, and `'Age'`. `'Name'`, `'Siblings/Spouses Aboard'`, and `'Parents/Children Aboard'` did not affect the person's survival, so these variables were not included. `'Sex'` was a categorical variable because its values were non-numerical.
 
