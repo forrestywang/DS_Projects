@@ -32,7 +32,7 @@ MODEL_NAME = 'insurance-model.joblib'
 
 First, I imported the necessary packages for manipulating the data set, making and training the logistic regression, testing accuracy, and exporting the model.
 
-I started the timer to see how long everything took to execute.
+I started the timer here to see how long everything took to execute.
 
 The constants were used to categorize the variables in the data set and improve readability. `'responseVariable'` was the dependent variable, while `'policyId'` was not included. `'Gender'`, `'territory'`, `'hadVehicleClaimInPast'`, and `'vehicleStatus'` were categorical variables because their values were either non-numerical, symbolic, or boolean. `'policyHolderAge'`, `'homeInsurancePremium'`, and `'nbWeeksInsured'` were numerical variables because their values were numerical.
 
@@ -60,7 +60,7 @@ The goal of machine learning models is to use data from independent variables to
 
 Since categorical variables are non-numerical, the training algorithm could not interpret them. To circumvent this, I changed all categorical variables into dummy variables.
 
-`pandas`' `pd.get_dummies(X, columns=CAT_VAR, drop_first=True)` function made all columns boolean for each possible value. For example, the `'Sex'` column was replaced with `'Sex_Male'`. This made all entries boolean values, where True represented male and False represented female. The `drop_first` parameter removed one of the dummy variables, since if all other dummy variable values were false, then the removed one was true.
+`pandas`' `pd.get_dummies(X, columns=CAT_VAR, drop_first=True)` function made all columns boolean for each possible value. For example, the `'Sex'` column was replaced with `'Sex_Male'`. This made all entries boolean values, where True represented male. The `drop_first` parameter removed one of the dummy variables, since if all other dummy variable values were false, then the removed one was true.
 
 In order to scale the numerical variables, I initialized a scaler using the `StandardScaler()` constructor. Then, I scaled the numerical variables, converted them into a `pandas` data frame, and replaced the unscaled variables with the scaled ones.
 
@@ -120,4 +120,36 @@ print(pd.DataFrame(log_reg.predict(X_test), columns=['predictedResponseVariable'
 
 Finally, I exported the model with `joblib`'s `joblib.dump(log_reg, MODEL_NAME)` function. This allowed me to use the same model for future predictions without having to train a new one.
 
-I stopped the timer to calculate how long everything took to execute.
+I stopped the timer here to calculate how long everything took to execute.
+
+Since 'predictedResponseVariable' was boolean (1 represented buying car insurance), I printed a data frame that showed the distribution of zeros and ones.
+
+## In-Depth Documentation: [Predictions.ipynb](/Machine%20Learning%20Workshop/Predictions.ipynb)
+
+The documentation for every section is the same as the documentation above.
+
+<br>
+
+### Predicting and exporting the predictions
+
+```python
+# Loading the logistic regression model:
+log_reg = joblib.load(MODEL_NAME)
+
+# Predictions data frame:
+pred_df = pd.DataFrame(log_reg.predict(score_df), columns=['predictedResponseVariable'])
+
+# Policy ID data frame:
+policyId_df = pd.read_csv(SCORE_DATASET_FILE_NAME, usecols=['policyId'])
+
+# Exporting the submission data frame as a csv file:
+policyId_df.join(pred_df).to_csv(SUBMISSION_FILE_NAME, index=False)
+
+# Execution time:
+end_time = time.time()
+print("Execution time:", end_time - start_time, "seconds")
+
+# Number of 1s:
+print(pred_df['predictedResponseVariable'].value_counts())
+```
+In order to export the predictions, I concatenated the policy ID with the predictions data frame and exported it as a .csv file.
