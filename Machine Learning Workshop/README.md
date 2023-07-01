@@ -156,8 +156,9 @@ policyId_df.join(pred_df).to_csv(SUBMISSION_FILE_NAME, index=False)
 # Execution time:
 end_time = time.time()
 print("Execution time:", end_time - start_time, "seconds")
+print()
 
-# Number of 1s:
+# Number of ones:
 print(pred_df['predictedResponseVariable'].value_counts())
 ```
 In order to export the predictions, I concatenated the policy ID with the predictions data frame and exported it as a .csv file.
