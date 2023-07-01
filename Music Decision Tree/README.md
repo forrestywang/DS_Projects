@@ -76,7 +76,7 @@ score = accuracy_score(y_test, predictions) * 100
 print("Accuracy:", score, '\b%')
 ```
 
-Now that the decision tree has been trained, I predicted the accuracy by testing it with the `dec_tree.predict(X_test)` function. `sklearn.metrics`' `accuracy_score(y_test, predictions)` function compared the results and returned the accuracy. Since the accuracy $\in [0, 1]$, multiplying it by 100 and concatenating the % sign turned it into a percentage.
+Now that the decision tree has been trained, I predicted the accuracy by testing it with the `dec_tree.predict(X_test)` function. `sklearn.metrics`' `accuracy_score(y_test, predictions)` function compared the results and returned the accuracy. Since the accuracy $\in [0, 1]$, multiplying it by 100 and concatenating the % sign converted it into a percentage.
 
 <br>
 
