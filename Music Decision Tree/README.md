@@ -1,6 +1,6 @@
 # Music Decision Tree
 
-Code copied from [Programming with Mosh's Python Machine Learning Tutorial](https://www.youtube.com/watch?v=7eh4d6sabA0). The scikit-learn and pandas packages made the decision tree model and set up the data frame respectively.
+Code copied from [Programming with Mosh's Python Machine Learning Tutorial](https://www.youtube.com/watch?v=7eh4d6sabA0).
 
 <br>
 
@@ -25,7 +25,7 @@ DEP_VAR = 'genre'
 MODEL_NAME = 'music-recommender.joblib'
 ```
 
-First, I imported the necessary packages for manipulating the data set, making and training the decision tree, testing accuracy, and exporting the model.
+First, I imported the necessary packages for manipulating the data set, making and training the decision tree, testing accuracy, and exporting the model. The `scikit-learn` and `pandas` packages made the decision tree model and set up the data frame respectively.
 
 The constants were used to categorize the variables in the data set and improve readability. `'genre'` was the dependent variable because it depended on the independent variables `'age'`, and `'gender'`.
 
