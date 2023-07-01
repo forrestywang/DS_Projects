@@ -2,6 +2,8 @@
 
 Submission for the [2023 McMaster & Co-operators Problem-Solving Workshop](https://math.mcmaster.ca/fourth-mcmaster-co-operators-problem-solving-workshop/). Although our team did not win, I am thankful that the workshop gave me an introduction to the world of data science and machine learning.
 
+<br>
+
 ## In-Depth Documentation: [Logistic Regression.ipynb](/Machine%20Learning%20Workshop/Logistic%20Regression.ipynb)
 
 ### Setting up the machine learning model
@@ -123,6 +125,8 @@ Finally, I exported the model with `joblib`'s `joblib.dump(log_reg, MODEL_NAME)`
 I stopped the timer here to calculate how long everything took to execute.
 
 Since 'predictedResponseVariable' was boolean (1 represented buying car insurance), I printed a data frame that showed the distribution of zeros and ones.
+
+<br>
 
 ## In-Depth Documentation: [Predictions.ipynb](/Machine%20Learning%20Workshop/Predictions.ipynb)
 
