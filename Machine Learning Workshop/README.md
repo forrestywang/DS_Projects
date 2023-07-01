@@ -71,7 +71,7 @@ In order to scale the numerical variables, I initialized a scaler using the `Sta
 ### Setting up the train-test modularization and logistic regression model
 
 ```python
-# Testing and training sets:
+# Training and testing sets:
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
 
 # Logistic regression model:
@@ -86,7 +86,7 @@ I used `sklearn.model_selection`'s `train_test_split(X, y, train_size=0.8)` func
 
 Then, I initialized the logistic regression with `sklearn.linear_model`'s `LogisticRegression(solver='lbfgs')` constructor with the [Limited-memory BFG Solver](https://en.wikipedia.org/wiki/Limited-memory_BFGS) and trained it with the training data using the `log_reg.fit(X_train, y_train)` function. The default number of iterations took too long, so I increased the limit using `log_reg.max_iter = 10000`.
 
-*Note: Since there is an entire data frame for training the model, the only purpose of splitting the train test is to check the accuracy. When submitting the predictions, the fit function should look like `log_reg.fit(X, y)`.*
+*Note: Since there is an entire data frame for training the model, the only purpose of splitting the train test is to check the accuracy. When submitting the predictions, the fit function should look like `log_reg.fit(X, y)` and the training and testing sets portion should be commented out.*
 
 <br>
 
@@ -101,7 +101,9 @@ score = accuracy_score(y_test, predictions) * 100
 print("Accuracy:", score, '\b%')
 ```
 
-Now that the logistic regression has been trained, I predicted the accuracy by testing it with the `log_reg.predict(X_test)` function. `sklearn.metrics`' `accuracy_score(y_test, predictions)` function compared the results and returned the accuracy. Since the accuracy $\in [0, 1]$, multiplying it by 100 and concatenating a % sign turned it into a percentage.
+Now that the logistic regression has been trained, I predicted the accuracy by testing it with the `log_reg.predict(X_test)` function. `sklearn.metrics`' `accuracy_score(y_test, predictions)` function compared the results and returned the accuracy. Since the accuracy $\in [0, 1]$, multiplying it by 100 and concatenating a % sign converted it into a percentage.
+
+*Note: This entire section should be commented out when submitting the predictions. Since the entire data frame would be fitted to the model, there is no need to make any more predictions about it.*
 
 <br>
 
@@ -116,7 +118,7 @@ end_time = time.time()
 print("Execution time:", end_time - start_time, "seconds")
 print()
 
-# Number of 1s:
+# Number of ones:
 print(pd.DataFrame(log_reg.predict(X_test), columns=['predictedResponseVariable'])['predictedResponseVariable'].value_counts())
 ```
 
@@ -125,6 +127,8 @@ Finally, I exported the model with `joblib`'s `joblib.dump(log_reg, MODEL_NAME)`
 I stopped the timer here to calculate how long everything took to execute.
 
 Since 'predictedResponseVariable' was boolean (1 represented buying car insurance), I printed a data frame that showed the distribution of zeros and ones.
+
+*Note: When submitting the predictions, the number of ones portion should be commented out since no predictions should have been made.*
 
 <br>
 
