@@ -2,6 +2,8 @@
 
 Code copied from [Python Maratón's Sklearn Logistic Regression Video](https://www.youtube.com/watch?v=VK6v9Ure8Lk). The scikit-learn and pandas packages made the logistic regression model and set up the data frame respectively.
 
+<br>
+
 ## In-Depth Documentation: [Logistic Regression.ipynb](/Titanic%20Logistic%20Regression/Logistic%20Regression.ipynb)
 
 ### Setting up the machine learning model
