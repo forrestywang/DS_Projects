@@ -1,6 +1,6 @@
 # Titanic Logistic Regression
 
-Code copied from [Python Maratón's Sklearn Logistic Regression Video](https://www.youtube.com/watch?v=VK6v9Ure8Lk).
+Code copied from [Python Maratón's Sklearn Logistic Regression Tutorial](https://www.youtube.com/watch?v=VK6v9Ure8Lk).
 
 <br>
 
