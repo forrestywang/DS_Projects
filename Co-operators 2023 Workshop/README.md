@@ -75,7 +75,7 @@ To scale the numerical variables, I initialized a scaler using the `StandardScal
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
 
 # Logistic regression model:
-log_reg = LogisticRegression(max_iter=10000)  # Specific logistic regression algorithm
+log_reg = LogisticRegression(max_iter=10000)
 log_reg.fit(X_train, y_train)  # Parameters are supposed to be X, y
 ```
 
