@@ -1,4 +1,4 @@
-# Machine Learning Workshop
+# Co-operators 2024 Workshop
 
 Submission for the [2023 McMaster & Co-operators Problem-Solving Workshop](https://math.mcmaster.ca/fourth-mcmaster-co-operators-problem-solving-workshop/). Although our team did not win, I am thankful that the workshop gave me an introduction to the world of data science and machine learning.
 
@@ -6,7 +6,7 @@ Submission for the [2023 McMaster & Co-operators Problem-Solving Workshop](https
 
 ## In-Depth Documentation: [Logistic Regression.ipynb](/Machine%20Learning%20Workshop/Logistic%20Regression.ipynb)
 
-### Setting up the machine learning model
+### Setting up the logistic regression model
 
 ```python
 # Imports:
@@ -64,7 +64,7 @@ Since categorical variables are non-numerical, the training algorithm could not 
 
 `pandas`' `pd.get_dummies(X, columns=CAT_VAR, drop_first=True)` function made all columns boolean for each possible value. For example, the `'Sex'` column was replaced with `'Sex_Male'`. This made all entries boolean values, where True represented male. The `drop_first` parameter removed one of the dummy variables, since if all other dummy variable values were false, then the removed one was true.
 
-In order to scale the numerical variables, I initialized a scaler using the `StandardScaler()` constructor. Then, I scaled the numerical variables, converted them into a `pandas` data frame, and replaced the unscaled variables with the scaled ones.
+To scale the numerical variables, I initialized a scaler using the `StandardScaler()` constructor. Then, I scaled the numerical variables, converted them into a `pandas` data frame, and replaced the unscaled variables with the scaled ones.
 
 <br>
 
@@ -75,12 +75,11 @@ In order to scale the numerical variables, I initialized a scaler using the `Sta
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
 
 # Logistic regression model:
-log_reg = LogisticRegression(solver='lbfgs')  # Specific logistic regression algorithm
-log_reg.max_iter = 10000
+log_reg = LogisticRegression(solver='lbfgs', max_iter=10000)  # Specific logistic regression algorithm
 log_reg.fit(X_train, y_train)  # Parameters are supposed to be X, y
 ```
 
-In order to train a model and test its accuracy, I had to allocate a portion of the data to training, and a portion to testing. Usually, 80% of the data is allocated to training, while the remaining 20% is allocated to testing.
+To train a model and test its accuracy, I had to allocate a portion of the data to training, and a portion to testing. Usually, 80% of the data is allocated to training, while the remaining 20% is allocated to testing.
 
 I used `sklearn.model_selection`'s `train_test_split(X, y, train_size=0.8)` function to randomly split the data set into the desired ratio.
 
