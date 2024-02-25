@@ -1,3 +1,3 @@
-# Machine_Learning_Projects
+# DS_Projects
 
-All machine learning projects and workshops.
+All data science projects and workshops.
