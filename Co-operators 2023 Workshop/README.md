@@ -1,4 +1,4 @@
-# Co-operators 2024 Workshop
+# Co-operators 2023 Workshop
 
 Submission for the [2023 McMaster & Co-operators Problem-Solving Workshop](https://math.mcmaster.ca/fourth-mcmaster-co-operators-problem-solving-workshop/). Although our team did not win, I am thankful that the workshop gave me an introduction to the world of data science and machine learning.
 
