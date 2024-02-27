@@ -76,14 +76,15 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
 
 # Logistic regression model:
 log_reg = LogisticRegression(max_iter=10000)
-log_reg.fit(X_train, y_train)  # Parameters are supposed to be X, y
+# log_reg.fit(X_train, y_train)
+log_reg.fit(X, y)
 ```
 
 To train a model and test its accuracy, I had to allocate a portion of the data to training, and a portion to testing. Usually, 80% of the data is allocated to training, while the remaining 20% is allocated to testing.
 
 I used `sklearn.model_selection`'s `train_test_split(X, y, train_size=0.8)` function to randomly split the data set into the desired ratio.
 
-Then, I initialized the logistic regression with `sklearn.linear_model`'s `LogisticRegression(solver='lbfgs')` constructor with the [Limited-memory BFG Solver](https://en.wikipedia.org/wiki/Limited-memory_BFGS) and trained it with the training data using the `log_reg.fit(X_train, y_train)` function. The default number of iterations took too long, so I increased the limit using `log_reg.max_iter = 10000`.
+Then, I trained the model with the data using the `log_reg.fit(X_train, y_train)` function. The runtime with the default number of iterations was too long, so I increased the limit using `log_reg.max_iter = 10000`.
 
 *Note: Since there is an entire data frame for training the model, the only purpose of splitting the train test is to check the accuracy. When submitting the predictions, the fit function should look like `log_reg.fit(X, y)` and the training and testing sets portion should be commented out.*
 
