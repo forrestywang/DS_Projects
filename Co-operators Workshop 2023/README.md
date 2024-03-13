@@ -4,7 +4,7 @@ Submission for the [2023 McMaster & Co-operators Problem-Solving Workshop](https
 
 <br>
 
-## In-Depth Documentation: [Logistic Regression.ipynb](/Machine%20Learning%20Workshop/Logistic%20Regression.ipynb)
+## In-Depth Documentation: [Logistic Regression.ipynb](/Co-operators%20Workshop%202023/Logistic%20Regression.ipynb)
 
 ### Setting up the logistic regression model
 
@@ -133,7 +133,7 @@ Since 'predictedResponseVariable' was boolean (1 represented buying car insuranc
 
 <br>
 
-## In-Depth Documentation: [Predictions.ipynb](/Machine%20Learning%20Workshop/Predictions.ipynb)
+## In-Depth Documentation: [Predictions.ipynb](/Co-operators%20Workshop%202023/Predictions.ipynb)
 
 The documentation for every section is the same as the documentation above.
 
