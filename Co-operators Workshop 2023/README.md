@@ -50,6 +50,7 @@ X, y = pd.read_csv(DATASET_FILE_NAME, usecols=INDEP_VAR), pd.read_csv(DATASET_FI
 X = X.fillna(0)  # Replaces NA entries with 0 for hasMortgage
 X = pd.get_dummies(X, columns=CAT_VAR, drop_first=True)  # Converts CAT_VAR into boolean variables
 
+# Scaling:
 scaler = StandardScaler()
 scaled_var = pd.DataFrame(scaler.fit_transform((X[NUM_VAR])), columns=NUM_VAR)  # Scaling the numerical variables
 X = X.drop(columns=NUM_VAR)  # Dropping the old numerical variables
