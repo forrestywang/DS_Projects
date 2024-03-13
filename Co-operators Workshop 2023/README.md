@@ -29,7 +29,7 @@ DEP_VAR = 'responseVariable'
 CAT_VAR = ['Gender', 'territory', 'hadVehicleClaimInPast', 'vehicleStatus']
 NUM_VAR = ['policyHolderAge', 'homeInsurancePremium', 'nbWeeksInsured']
 
-MODEL_NAME = 'insurance-model.joblib'
+MODEL_NAME = 'logistic-regression.joblib'
 ```
 
 First, I imported the necessary packages for manipulating the data set, making and training the logistic regression, testing accuracy, and exporting the model. The `scikit-learn` and `pandas` packages made the logistic regression model and set up the data frame respectively.
