@@ -1,6 +1,6 @@
 # Co-operators Workshop 2024
 
-Submission for the [2023 McMaster & Co-operators Problem-Solving Workshop](https://math.mcmaster.ca/fifth-annual-mcmaster-industrial-workshop-registration-open/).
+Submission for the [2024 McMaster & Co-operators Problem-Solving Workshop](https://math.mcmaster.ca/fifth-annual-mcmaster-industrial-workshop-registration-open/).
 
 ## Files:
 
