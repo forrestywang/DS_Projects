@@ -98,7 +98,7 @@ Then, I trained the model with the data using the `log_reg.fit(X_train, y_train)
 predictions = log_reg.predict(X_test)
 
 # Accuracy score:
-score = accuracy_score(y_test, predictions) * 100
+score = round(accuracy_score(y_test, predictions) * 100, 3)
 print("Accuracy:", score, '\b%')
 ```
 
@@ -116,7 +116,7 @@ joblib.dump(log_reg, MODEL_NAME)
 
 # Execution time:
 end_time = time.time()
-print("Execution time:", end_time - start_time, "seconds")
+print("Execution time:", round(end_time - start_time, 3) , "seconds")
 print()
 
 # Number of ones:
@@ -154,12 +154,7 @@ policyId_df = pd.read_csv(SCORE_DATASET_FILE_NAME, usecols=['policyId'])
 # Exporting the submission data frame as a csv file:
 policyId_df.join(pred_df).to_csv(SUBMISSION_FILE_NAME, index=False)
 
-# Execution time:
-end_time = time.time()
-print("Execution time:", end_time - start_time, "seconds")
-print()
-
 # Number of ones:
 print(pred_df['predictedResponseVariable'].value_counts())
 ```
-In order to export the predictions, I concatenated the policy ID with the predictions data frame and exported it as a .csv file.
+To export the predictions, I concatenated the policy ID with the predictions data frame and exported it as a .csv file.
