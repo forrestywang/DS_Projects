@@ -50,7 +50,7 @@ Sex was an important factor when predicting survival, so I included it as an ind
 
 <br>
 
-### Setting up the train-test modularization and logistic regression model
+### Setting up the train-test modularization and logistic regression
 
 ```python
 # Training and testing sets:
