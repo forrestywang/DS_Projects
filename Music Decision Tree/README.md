@@ -42,7 +42,7 @@ The goal of machine learning models is to use data from independent variables to
 
 <br>
 
-### Setting up the train-test modularization and decision tree model
+### Setting up the train-test modularization and decision tree
 
 ```python
 # Training and testing sets:
