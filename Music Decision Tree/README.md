@@ -6,7 +6,7 @@ Code copied from [Programming with Mosh's Python Machine Learning Tutorial](http
 
 ## In-depth Documentation: [Decision Tree.ipynb](/Music%20Decision%20Tree/Decision%20Tree.ipynb)
 
-### Setting up the machine learning model
+### Setting up the decision tree
 
 ```python
 # Imports:
@@ -55,7 +55,7 @@ dec_tree.fit(X_train, y_train)
 # dec_tree = joblib.load(MODEL_NAME)
 ```
 
-In order to train a model and test its accuracy, I had to allocate a portion of the data to training, and a portion to testing. Usually, 80% of the data is allocated to training, while the remaining 20% is allocated to testing.
+To train a model and test its accuracy, I had to allocate a portion of the data to training, and a portion to testing. Usually, 80% of the data is allocated to training, while the remaining 20% is allocated to testing.
 
 I used `sklearn.model_selection`'s `train_test_split(X, y, train_size=0.8)` function to randomly split the data set into the desired ratio.
 
