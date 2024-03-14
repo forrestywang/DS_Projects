@@ -6,7 +6,7 @@ Code copied from [Python Maratón's Sklearn Logistic Regression Tutorial](https:
 
 ## In-Depth Documentation: [Logistic Regression.ipynb](/Titanic%20Logistic%20Regression/Logistic%20Regression.ipynb)
 
-### Setting up the machine learning model
+### Setting up the logistic regression
 
 ```python
 # Imports:
@@ -80,11 +80,11 @@ Then, I initialized the logistic regression with `sklearn.linear_model`'s `Logis
 predictions = log_reg.predict(X_test)
 
 # Accuracy score:
-score = accuracy_score(y_test, predictions) * 100
+score = round(accuracy_score(y_test, predictions) * 100, 3)
 print("Accuracy:", score, '\b%')
 ```
 
-Now that the logistic regression has been trained, I predicted the accuracy by testing it with the `log_reg.predict(X_test)` function. `sklearn.metrics`' `accuracy_score(y_test, predictions)` function compared the results and returned the accuracy. Since the accuracy $\in [0, 1]$, multiplying it by 100 and concatenating a % sign converted it into a percentage.
+Now that the logistic regression has been trained, I predicted the accuracy by testing it with the `log_reg.predict(X_test)` function. `sklearn.metrics`' `accuracy_score(y_test, predictions)` function compared the results and returned the accuracy.
 
 <br>
 
