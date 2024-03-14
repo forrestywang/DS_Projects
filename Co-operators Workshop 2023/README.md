@@ -6,7 +6,7 @@ Submission for the [2023 McMaster & Co-operators Problem-Solving Workshop](https
 
 ## In-Depth Documentation: [Logistic Regression.ipynb](/Co-operators%20Workshop%202023/Logistic%20Regression.ipynb)
 
-### Setting up the logistic regression model
+### Setting up the logistic regression
 
 ```python
 # Imports:
@@ -69,7 +69,7 @@ To scale the numerical variables, I initialized a scaler using the `StandardScal
 
 <br>
 
-### Setting up the train-test modularization and logistic regression model
+### Setting up the train-test modularization and logistic regression
 
 ```python
 # Training and testing sets:
@@ -157,4 +157,4 @@ policyId_df.join(pred_df).to_csv(SUBMISSION_FILE_NAME, index=False)
 # Number of ones:
 print(pred_df['predictedResponseVariable'].value_counts())
 ```
-To export the predictions, I concatenated the policy ID with the predictions data frame and exported it as a .csv file.
+To export the predictions, I concatenated the policy ID with the predictions data frame and exported it as a csv file.
